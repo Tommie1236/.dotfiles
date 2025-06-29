@@ -18,7 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 
-vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
@@ -26,7 +25,6 @@ require("lazy").setup({
         { import = "plugins" },
     },
 
-    install = { colorsheme = { "habamax" } },
-    checker = { enabled = true },
+    change_detection = { notify = false},
 })
 

@@ -10,6 +10,7 @@ return {
         vim.keymap.set('n', '<leader>fg', buildin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader>fb', buildin.buffers, { desc = 'Telescope buffers' })
         vim.keymap.set('n', '<leader>fh', buildin.help_tags, { desc = 'Telescope help tags' })
-        vim.keymap.set('n', '<leager>fs', buildin.grep_string, { desc = 'Telescope grep string' })
+        vim.keymap.set('n', '<leader>fs', buildin.grep_string, { desc = 'Telescope grep string' })
     end
 }
+

@@ -20,8 +20,8 @@ return {
                 finder = require("telescope.finders").new_table({
                     results = file_paths,
                 }),
-                previewer = conf.file_previewer({}),
-                sorter = conf.generic_sorter({}),
+                previewer = config.file_previewer({}),
+                sorter = config.generic_sorter({}),
             }):find()
         end 
 

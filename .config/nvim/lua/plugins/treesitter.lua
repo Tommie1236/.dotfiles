@@ -24,6 +24,8 @@ return {
                 'markdown',
                 'markdown_inline',
                 'query',
+                'json',
+                'yaml',
 
             },
             auto_install = false,

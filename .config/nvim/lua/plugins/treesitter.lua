@@ -26,6 +26,7 @@ return {
                 'query',
                 'json',
                 'yaml',
+                'asm',
 
             },
             auto_install = false,

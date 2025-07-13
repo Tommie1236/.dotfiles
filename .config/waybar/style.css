@@ -1,5 +1,5 @@
 * {
-    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-family: 'JetBrainsMono NFM', 'Font Awesome 6 Free', monospace;
     font-size: 13px;
 }
 
@@ -63,22 +63,15 @@ button:hover {
 #battery,
 #cpu,
 #memory,
-#disk,
 #temperature,
 #backlight,
 #network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
 #tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
 
 #window,
 #workspaces {

@@ -1,0 +1,36 @@
+local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+
+local on_attach = function(client, bufnr)
+    local opts = { noremap = true, silent = true, buffer = bufnr }
+
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+    vim.keymap.set("n", "H", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+
+    
+
+end
+
+
+-- setup all lsp servers
+local servers = {
+    "lua_ls",
+    "clangd",
+    "cmake", 
+    "bashls",
+    "pyright",
+    "marksman",
+    "jsonls",
+    "yamlls",
+    "asm_lsp",
+}
+
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+    })
+end

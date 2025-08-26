@@ -7,7 +7,7 @@ local on_attach = function(client, bufnr)
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "H", vim.lsp.buf.hover, opts)
+    -- vim.keymap.set("n", "H", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
     
@@ -29,8 +29,14 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup({
+    local opts = {
         capabilities = capabilities,
         on_attach = on_attach,
-    })
+    }
+
+    if lsp == "clangd" then
+        opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
+    end
+
+    lspconfig[lsp].setup(opts)
 end

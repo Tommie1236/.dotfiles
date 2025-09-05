@@ -15,6 +15,7 @@ return {
                 "jsonls",
                 "yamlls",
                 "asm_lsp",
+                "arduino_language_server",
             },
         })
     end,

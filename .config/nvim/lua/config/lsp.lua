@@ -26,6 +26,7 @@ local servers = {
     "jsonls",
     "yamlls",
     "asm_lsp",
+    "arduino_language_server",
 }
 
 for _, lsp in ipairs(servers) do
@@ -36,6 +37,9 @@ for _, lsp in ipairs(servers) do
 
     if lsp == "clangd" then
         opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
+    end
+    if lsp == "arduino_language_server" then
+        opts.cmd = { "-cli-config", "/home/timoo/bin/arduino-cli",}
     end
 
     lspconfig[lsp].setup(opts)

@@ -39,7 +39,11 @@ for _, lsp in ipairs(servers) do
         opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
     end
     if lsp == "arduino_language_server" then
-        opts.cmd = { "-cli-config", "/home/timoo/bin/arduino-cli",}
+        opts.cmd = {"arduino-language-server",
+                    "-cli-config", "/home/timoo/.arduino15/arduino-cli.yaml",
+                    "-fqbn", "arduino:avr:uno",
+                    "-cli", "/home/timoo/bin/arduino-cli",
+                    "-clangd", "/usr/bin/clangd",}
     end
 
     lspconfig[lsp].setup(opts)

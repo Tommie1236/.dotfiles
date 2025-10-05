@@ -7,6 +7,7 @@ ln -snf $DOTFILES/.config/waybar ~/.config/waybar
 ln -snf $DOTFILES/.config/nvim ~/.config/nvim
 ln -snf $DOTFILES/.config/fish ~/.config/fish
 ln -snf $DOTFILES/.config/ly ~/.config/ly
+sudo ln -snf $DOTFILES/.config/keyd/keyd /etc/keyd
 
 sudo ln -snf $DOTFILES/.config/ly /etc/ly
 

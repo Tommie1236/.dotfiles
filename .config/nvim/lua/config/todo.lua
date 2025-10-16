@@ -38,3 +38,7 @@ require("todo-comments").setup({
         pattern = [[\b(KEYWORDS):]],
     },
 })
+
+
+
+vim.keymap.set("n", "<leader>td", "<cmd>TodoTelescope<CR>")

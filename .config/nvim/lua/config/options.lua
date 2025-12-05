@@ -7,6 +7,9 @@ vim.opt.cursorline = true
 
 vim.opt.number = true
 
+-- vim.opt.foldmethod=expr
+-- vim.opt.foldexpr=nvim_treesitter#foldexpr()
+
 vim.api.nvim_create_augroup("numbertoggle", { clear = true })
 
 vim.api.nvim_create_autocmd(

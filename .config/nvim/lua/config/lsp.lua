@@ -1,4 +1,4 @@
-local lspconfig = require("lspconfig")
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 
@@ -36,7 +36,8 @@ for _, lsp in ipairs(servers) do
     }
 
     if lsp == "clangd" then
-        opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
+        opts.cmd = { "clangd"}
+        -- opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
     end
     if lsp == "arduino_language_server" then
         opts.cmd = {"arduino-language-server",
@@ -46,5 +47,9 @@ for _, lsp in ipairs(servers) do
                     "-clangd", "/usr/bin/clangd",}
     end
 
-    lspconfig[lsp].setup(opts)
+    vim.lsp.config(lsp, opts)
+end
+
+for _, lsp in ipairs(servers) do
+    vim.lsp.enable(lsp)
 end

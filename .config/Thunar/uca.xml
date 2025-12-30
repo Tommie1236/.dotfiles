@@ -4,28 +4,12 @@
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
-	<unique-id>1760576977941222-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<unique-id>1760923834808241-1</unique-id>
+	<command>xdg-open --working-directory %f --launch TerminalEmulator</command>
 	<description>Example for a custom action</description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
-</action>
-<action>
-	<icon>trash-empty</icon>
-	<name>Permanently Delete</name>
-	<submenu></submenu>
-	<unique-id>1760577624930930-1</unique-id>
-	<command>rm -rf %F</command>
-	<description></description>
-	<range>*</range>
-	<patterns>*</patterns>
-	<directories/>
-	<audio-files/>
-	<image-files/>
-	<other-files/>
-	<text-files/>
-	<video-files/>
 </action>
 </actions>

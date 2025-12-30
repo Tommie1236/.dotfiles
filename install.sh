@@ -8,6 +8,7 @@ ln -snf $DOTFILES/.config/nvim ~/.config/nvim
 ln -snf $DOTFILES/.config/fish ~/.config/fish
 ln -snf $DOTFILES/.config/ly ~/.config/ly
 ln -snf $DOTFILES/.config/Thunar ~/.config/Thunar
+ln -snf $DOTFILES/.config/kitty ~/.config/kitty
 sudo ln -snf $DOTFILES/.config/keyd/keyd /etc/keyd
 
 sudo ln -snf $DOTFILES/.config/ly /etc/ly

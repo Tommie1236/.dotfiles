@@ -39,6 +39,8 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%B %d %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        // TODO: fix this v
+        //"tooltip-format": "<big>{:%H:%M}</big>\n<big>{:%B %d %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -90,7 +92,8 @@
         "tooltip-format-ethernet": "{ifname} via {gwaddr} ",
         "format-linked": "",
         "format-disconnected": "⚠",
-        "format-alt": "{ipaddr}/{cidr} ({ifname})"
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "{ipaddr}/{cidr} ({ifname})",
     },
     "pulseaudio": {
         "scroll-step": 1, 
@@ -98,16 +101,11 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "{volume}%  {format_source}",
-        //"format-source": "{volume}% ",
+        "format-source": "{volume}% ",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol-qt"
@@ -121,7 +119,6 @@
             "shutdown": "systemctl poweroff",
             "reboot": "systemctl reboot",
             "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
         }
     }
 }

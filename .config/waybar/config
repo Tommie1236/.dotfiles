@@ -15,9 +15,9 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "temperature",
-        "cpu",
-        "memory",
+        //"temperature",
+        //"cpu",
+        //"memory",
         "battery",
         "backlight",
         "clock",
@@ -57,7 +57,7 @@
     },
     "backlight": {
         "format": "{percent}% {icon}",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+        "format-icons": ["🌕", "🌔", "🌓", "🌒", "🌑"]
     },
     "battery": {
         "states": {
@@ -85,11 +85,12 @@
     },
     "network": {
         "format-wifi": " {signalStrength}%",
+        "tooltip-format-wifi": "ssid: {essid}",
         "format-ethernet": "",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-ethernet": "{ifname} via {gwaddr} ",
         "format-linked": "",
         "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ipaddr}/{cidr} ({ifname})"
     },
     "pulseaudio": {
         "scroll-step": 1, 
@@ -112,7 +113,7 @@
         "on-click": "pavucontrol-qt"
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

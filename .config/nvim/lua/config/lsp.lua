@@ -1,5 +1,6 @@
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local util = require("lspconfig.util")
 
 
 local on_attach = function(client, bufnr)
@@ -37,7 +38,6 @@ for _, lsp in ipairs(servers) do
 
     if lsp == "clangd" then
         opts.cmd = { "clangd"}
-        -- opts.cmd = { "clangd", "--compile-commands-dir=Code/build" }
     end
     if lsp == "arduino_language_server" then
         opts.cmd = {"arduino-language-server",

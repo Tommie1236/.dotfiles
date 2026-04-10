@@ -8,3 +8,9 @@ vim.keymap.set("n", "<leader>h", function()
     })
 end, { buffer = bufnr })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+
+for i = 1, 9 do
+  vim.keymap.set("n", "<A-" .. i .. ">", i .. "gt")
+end
+vim.keymap.set("n", "<A-0>", "<cmd>10gt<CR>")
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>")

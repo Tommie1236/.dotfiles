@@ -47,6 +47,9 @@ button:hover {
 #pulseaudio:hover {
     background-color: #2f3577;
 }
+#bluetooth {
+    background-color: #008F00;
+}
 
 #workspaces button {
     padding: 0 5px;
@@ -111,6 +114,10 @@ button:hover {
 #battery.charging, #battery.plugged {
     color: #26A65B;
     /* background-color: #26A65B;*/
+}
+
+#battery.warning {
+    color: #e28c0b;
 }
 
 @keyframes blink {

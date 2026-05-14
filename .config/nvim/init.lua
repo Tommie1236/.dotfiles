@@ -6,4 +6,5 @@ require("config.lazy")
 require("config.lsp")
 require("config.cmp")
 require("config.todo")
+require("config.ufo")
 

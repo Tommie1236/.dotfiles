@@ -2,3 +2,4 @@
 .config/nvim/lazy-lock.json
 .config/hypr/workspaces.conf
 .config/hypr/monitors.conf
+.config/Thunar/accels.scm

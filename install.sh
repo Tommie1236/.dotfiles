@@ -11,6 +11,7 @@ ln -snf $DOTFILES/.config/Thunar ~/.config/Thunar
 ln -snf $DOTFILES/.config/kitty ~/.config/kitty
 ln -snf $DOTFILES/.config/containers ~/.config/containers
 ln -snf $DOTFILES/.config/openbox ~/.config/openbox
+ln -snf $DOTFILES/.config/rofi ~/.config/rofi
 sudo ln -snf $DOTFILES/.config/keyd/keyd /etc/keyd
 
 sudo ln -snf $DOTFILES/.config/ly /etc/ly

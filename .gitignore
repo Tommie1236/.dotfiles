@@ -1,2 +1,4 @@
 .config/nvim/undo/*
 .config/nvim/lazy-lock.json
+.config/hypr/workspaces.conf
+.config/hypr/monitors.conf
